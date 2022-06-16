@@ -1,0 +1,337 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  body {
+    background-color: #fffff;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  main {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1200px;
+  }
+  
+  .section::before,
+  .section::after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+  
+  .one,
+  .one-third,
+  .two-thirds,
+  .one-fourth,
+  .half {
+    width: 100%;
+  }
+  
+  .page {
+      margin-top: 100px;
+      margin-bottom: 100px;
+  }
+
+  .page>img {
+      max-width: 100%;
+  }
+
+  @media only screen and (min-width: 800px) {
+    .one {
+      width: 100%;
+    }
+    .half {
+      width: calc(100% / 2);
+    }
+    .one-third {
+      width: calc(100% / 3);
+    }
+    .one-fourth {
+      width: calc(100% / 4);
+    }
+    .two-thirds {
+      width: calc(100% / 3 * 2);
+    }
+    .article {
+      float: left;
+    }
+  }
+  
+  .navigation {
+    height: 70px;
+    background-color: #D3D3D3;
+  }
+  
+  .nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .brand {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-size: 1.4em;
+  }
+  
+  .brand a,
+  .brand a:visited {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    float: left;
+    position: relative;
+  }
+  
+  nav ul li a,
+  nav ul li a:visited {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    background: #262626;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a:visited:hover {
+    background: #2581DC;
+    color: #ffffff;
+  }
+  /* Mobile navigation */
+  
+  .nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #262626;
+    height: 70px;
+    width: 70px;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav-mobile {
+      display: block;
+    }
+    nav {
+      width: 100%;
+      padding: 70px 0 15px;
+    }
+    nav ul {
+      display: none;
+    }
+    nav ul li {
+      float: none;
+    }
+    nav ul li a {
+      padding: 15px;
+      line-height: 20px;
+    }
+  }
+   #nav-toggle {
+        position: absolute;
+        left: 18px;
+        top: 22px;
+        cursor: pointer;
+        padding: 10px 35px 16px 0px;
+      }
+      #nav-toggle span,
+      #nav-toggle span:before,
+      #nav-toggle span:after {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 5px;
+        width: 35px;
+        background: #ffffff;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: all 300ms ease-in-out;
+      }
+      #nav-toggle span:before {
+        top: -10px;
+      }
+      #nav-toggle span:after {
+        bottom: -10px;
+      }
+      #nav-toggle.active span {
+        background-color: transparent;
+      }
+      #nav-toggle.active span:before,
+      #nav-toggle.active span:after {
+        top: 0;
+      }
+      #nav-toggle.active span:before {
+        transform: rotate(45deg);
+      }
+      #nav-toggle.active span:after {
+        transform: rotate(-45deg);
+      }
+  .intro {
+    background-color: #e5e3e3;
+    display: inline-block;
+    width: 100%;
+    margin-top: 50px;
+  }
+  
+  .profile-image {
+    max-width: 400px;
+    height: auto;
+    float: left;
+  }
+  
+
+  .introduction-text {
+    float: left;
+    max-width: 400px;
+    position: relative;
+  margin-left: 40px;
+  
+  }
+  
+  p {
+    font-size: 22px;
+  }
+  
+  .h3 {
+    text-align: center;
+  }
+  
+  .h3 a:active {
+    text-decoration: none;
+  }
+  
+  .subheading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6f6f6f;
+  }
+  
+  .grid-container {
+    width: 100%;
+  }
+  /*-- our cleafix hack -- */
+  
+  .row:before,
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  [class*='col-'] {
+    float: left;
+    min-height: 1px;
+    width: 33.33%;
+    /*-- our gutter -- */
+    padding: 20px;
+    background-color: #e5e3e3;
+  }
+  
+  .box-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .job-description {
+    text-align: center;
+  }
+
+
+  /*-- some extra column content styling --*/
+  
+  [class*='col-'] > p {
+    background-color: #CECECE;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: black;
+  }
+  
+  /* Contact Form Styles */
+
+.contact-form-container {
+max-width: 1200px;height: 300px;
+ background-color: #e5e3e3;
+border-radius: 6px;
+border: 1px solid #CECECE;text-align: center;
+}
+.contact-form {display: inline-block;}
+
+
+#input-name {
+width: 80%;
+margin-top: 50px;
+margin-left: 20px;
+padding-top: 5px;padding-bottom: 5px
+
+}
+
+#input-email {
+width: 80%;margin-left: 20px;
+padding-top: 5px;padding-bottom: 5px
+}
+
+#input-subject {
+width: 80%;margin-left: 20px;
+padding-top: 5px;padding-bottom: 5px
+ }
+
+#input-message {
+width: 80%;
+ resize: none;margin-left: 20px;
+padding-top: 5px;padding-bottom: 5px;
+ }
+#input-submit {margin-left: 20px;
+padding-top: 10px;padding-bottom: 10px;
+width: 50%;}
+ 
+  /*-- media queries for mobile --*/
+  
+  @media all and (max-width:800px) {
+    .col-1 {
+      width: 50%;
+    }
+    .row .col-2:last-of-type {
+      width: 100%;
+    }
+    .row .col-5 ~ .col-1 {
+      width: 100%;
+    }
+    @media all and (max-width:650px) {
+      .col-1 {
+        width: 100%;
+      }
+      @media screen and (min-width: 800px) {
+        .nav-list {
+          display: block !important;
+        }
+       }
+     
+     
